@@ -92,11 +92,11 @@ const Board = () => {
   return (
     <div className=" w-full h-full p-4">
       <div className="flex justify-center items-center">
-        <span className="bg-blue-300 p-4 rounded-md font-bold text-xl">
-          Timer : 2:00 Min
+        <span className="bg-yellow-100 w-1/2 text-center  text-gray-600 p-4 rounded-md font-bold text-3xl mb-10">
+          Tic - Tac - Toe
         </span>
       </div>
-      <div className=" flex justify-around">
+      <div className=" flex justify-around mb-8">
         <div className="p-2">
           {turnPlay === "o" ? (
             <p className="bg-orange-300 p-4 duration-500 rounded-md font-bold text-lg">
@@ -107,7 +107,6 @@ const Board = () => {
               Player : X
             </p>
           )}
-          <p className="text-lg font-bold mt-6">Score : 0</p>
         </div>
         <div className="p-2 h-auto">
           {turnPlay === "x" ? (
@@ -119,13 +118,12 @@ const Board = () => {
               Player : O
             </p>
           )}
-          <p className="text-lg font-bold mt-6">Score : 0</p>
         </div>
       </div>
 
       <div className="flex flex-col items-center justify-center">
         <table className="text-0 border-inherit border-collapse bg-sky-200">
-          <caption className="mb-2 font-bold text-xl">
+          <caption className="mb-2 font-bold text-xl bg-pink-100 p-2 rounded-md">
             Turn : {turnPlay.toUpperCase()}
           </caption>
           <tbody>
@@ -148,7 +146,13 @@ const Board = () => {
         </table>
         {isDraw ? (
           <>
-            <h1>Draw!</h1> <button onClick={handleRestart}>Restart Game</button>
+            <h1 className="text-2xl mt-2 font-bold text-red-400">Draw!</h1>{" "}
+            <button
+              className="mt-2 shadow-md bg-black text-white p-3 hover:bg-red-200  hover:text-black hover:border-2 font-semibold text-lg rounded-md"
+              onClick={handleRestart}
+            >
+              Restart Game
+            </button>
           </>
         ) : winner ? (
           <>

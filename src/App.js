@@ -5,10 +5,10 @@ import Test from './components/Test';
 
 function App() {
   return (
-    <div className="bg-slate-100 min-h-screen flex justify-center items-center p-4 " >
-       {/* <Board/> */}
+    <div className="bg-sky-100 min-h-screen flex justify-center items-center p-4 " >
+      
        <Board/>
-       {/* <Test/> */}
+      
     </div>
   );
 }
