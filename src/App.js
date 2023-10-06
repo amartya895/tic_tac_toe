@@ -1,7 +1,5 @@
 import './App.css';
 import Board from './components/Board';
-import Test from './components/Test';
-// import Board from './components/Board';
 
 function App() {
   return (
